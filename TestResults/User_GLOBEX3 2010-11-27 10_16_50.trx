@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="354e3d4a-1e15-4c2b-9d44-2e2d7cfca878" name="User@GLOBEX3 2010-11-27 10:16:50" runUser="Globex3\User" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="32da79ee-237c-42d3-bb1d-ed78cd22848e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="User_GLOBEX3 2010-11-27 10_16_50">
+      <DeploymentItem filename="D:\Code\ZencoderWrapper\lib\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="D:\Code\ZencoderWrapper\lib\RestSharp.dll" />
+      <DeploymentItem filename="d:\code\ZencoderWrapper\ZencoderWrapper\bin\Debug\ZencoderWrapper.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-11-27T10:16:50.1746000-06:00" queuing="2010-11-27T10:16:52.3206000-06:00" start="2010-11-27T10:16:52.5186000-06:00" finish="2010-11-27T10:17:04.2616000-06:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="GLOBEX3" outcome="Error" timestamp="2010-11-27T10:17:04.2596000-06:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateAccountTest" storage="d:\code\zencoderwrapper\zencoderwrapper.tests\bin\debug\zencoderwrapper.tests.dll" id="01ac6f45-def8-4fdd-db30-4be7eeacbed7">
+      <Execution id="ec4207bc-8ac8-4635-9d91-88a89333ecfe" />
+      <TestMethod codeBase="D:/Code/ZencoderWrapper/ZencoderWrapper.Tests/bin/Debug/ZencoderWrapper.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ZencoderWrapper.Tests.ZencoderClientTest, ZencoderWrapper.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateAccountTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="01ac6f45-def8-4fdd-db30-4be7eeacbed7" executionId="ec4207bc-8ac8-4635-9d91-88a89333ecfe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ec4207bc-8ac8-4635-9d91-88a89333ecfe" testId="01ac6f45-def8-4fdd-db30-4be7eeacbed7" testName="CreateAccountTest" computerName="GLOBEX3" duration="00:00:11.5600000" startTime="2010-11-27T10:16:52.7016000-06:00" endTime="2010-11-27T10:17:04.2616000-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec4207bc-8ac8-4635-9d91-88a89333ecfe">
+    </UnitTestResult>
+  </Results>
+</TestRun>

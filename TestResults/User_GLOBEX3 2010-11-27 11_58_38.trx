@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="50f336dc-7633-4840-994b-04f9057df850" name="User@GLOBEX3 2010-11-27 11:58:38" runUser="Globex3\User" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="32da79ee-237c-42d3-bb1d-ed78cd22848e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="User_GLOBEX3 2010-11-27 11_58_38">
+      <DeploymentItem filename="D:\Code\ZencoderWrapper\lib\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="D:\Code\ZencoderWrapper\lib\RestSharp.dll" />
+      <DeploymentItem filename="d:\code\ZencoderWrapper\ZencoderWrapper\bin\Debug\ZencoderWrapper.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-11-27T11:58:38.4436000-06:00" queuing="2010-11-27T11:58:40.3556000-06:00" start="2010-11-27T11:58:40.5446000-06:00" finish="2010-11-27T12:05:19.1896000-06:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Submit_Advanced_JobTest" storage="d:\code\zencoderwrapper\zencoderwrapper.tests\bin\debug\zencoderwrapper.tests.dll" id="2b521d42-be86-7469-0121-9cf45438a2d9">
+      <Execution id="fe04752c-9e48-4e8e-8e3c-25b3d3e214bd" />
+      <TestMethod codeBase="D:/Code/ZencoderWrapper/ZencoderWrapper.Tests/bin/Debug/ZencoderWrapper.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ZencoderWrapper.Tests.ZencoderClientTest, ZencoderWrapper.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Submit_Advanced_JobTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="2b521d42-be86-7469-0121-9cf45438a2d9" executionId="fe04752c-9e48-4e8e-8e3c-25b3d3e214bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="fe04752c-9e48-4e8e-8e3c-25b3d3e214bd" testId="2b521d42-be86-7469-0121-9cf45438a2d9" testName="Submit_Advanced_JobTest" computerName="GLOBEX3" duration="00:06:36.6836262" startTime="2010-11-27T11:58:40.7326000-06:00" endTime="2010-11-27T12:05:19.0716000-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe04752c-9e48-4e8e-8e3c-25b3d3e214bd">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ZencoderWrapper.Tests.ZencoderClientTest.Submit_Advanced_JobTest threw exception: 
+System.Exception: Error reading JObject from JsonReader.</Message>
+          <StackTrace>    at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at RestSharp.Deserializers.JsonDeserializer.FindRoot(String content) in C:\Users\User\Downloads\johnsheehan-RestSharp-cb37e25\johnsheehan-RestSharp-cb37e25\RestSharp\Deserializers\JsonDeserializer.cs:line 65
+   at RestSharp.Deserializers.JsonDeserializer.Deserialize[T](RestResponse response) in C:\Users\User\Downloads\johnsheehan-RestSharp-cb37e25\johnsheehan-RestSharp-cb37e25\RestSharp\Deserializers\JsonDeserializer.cs:line 44
+   at ZencoderWrapper.ZencoderClient.ValidateResponse(IRestResponse Response, HttpStatusCode SuccessCode) in D:\Code\ZencoderWrapper\ZencoderWrapper\ZencoderClient.cs:line 345
+   at ZencoderWrapper.ZencoderClient.UpdateJob(Int32 JobID, String UpdateMethod) in D:\Code\ZencoderWrapper\ZencoderWrapper\ZencoderClient.cs:line 204
+   at ZencoderWrapper.ZencoderClient.CancelJob(Int32 JobID) in D:\Code\ZencoderWrapper\ZencoderWrapper\ZencoderClient.cs:line 185
+   at ZencoderWrapper.Tests.ZencoderClientTest.Submit_Advanced_JobTest() in D:\Code\ZencoderWrapper\ZencoderWrapper.Tests\ZencoderClientTest.cs:line 196
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

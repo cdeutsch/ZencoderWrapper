@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3035e70b-5bc7-460a-a238-2a6a6d394ebf" name="User@GLOBEX3 2010-11-27 10:12:59" runUser="Globex3\User" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="32da79ee-237c-42d3-bb1d-ed78cd22848e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="User_GLOBEX3 2010-11-27 10_12_59">
+      <DeploymentItem filename="D:\Code\ZencoderWrapper\lib\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="D:\Code\ZencoderWrapper\lib\RestSharp.dll" />
+      <DeploymentItem filename="d:\code\ZencoderWrapper\ZencoderWrapper\bin\Debug\ZencoderWrapper.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-11-27T10:12:59.5726000-06:00" queuing="2010-11-27T10:13:01.7936000-06:00" start="2010-11-27T10:13:01.9786000-06:00" finish="2010-11-27T10:14:19.1086000-06:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetAccountTest" storage="d:\code\zencoderwrapper\zencoderwrapper.tests\bin\debug\zencoderwrapper.tests.dll" id="9b76a399-4295-5073-64fa-1e8f7db5e089">
+      <Execution id="5d6d6d56-7c14-4945-a178-bc1db3cbe95f" />
+      <TestMethod codeBase="D:/Code/ZencoderWrapper/ZencoderWrapper.Tests/bin/Debug/ZencoderWrapper.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ZencoderWrapper.Tests.ZencoderClientTest, ZencoderWrapper.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAccountTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="9b76a399-4295-5073-64fa-1e8f7db5e089" executionId="5d6d6d56-7c14-4945-a178-bc1db3cbe95f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5d6d6d56-7c14-4945-a178-bc1db3cbe95f" testId="9b76a399-4295-5073-64fa-1e8f7db5e089" testName="GetAccountTest" computerName="GLOBEX3" duration="00:01:14.7968670" startTime="2010-11-27T10:13:02.2056000-06:00" endTime="2010-11-27T10:14:18.9466000-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d6d6d56-7c14-4945-a178-bc1db3cbe95f">
+    </UnitTestResult>
+  </Results>
+</TestRun>

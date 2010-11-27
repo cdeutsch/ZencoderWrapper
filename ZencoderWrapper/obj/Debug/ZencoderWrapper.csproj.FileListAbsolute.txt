@@ -1,0 +1,8 @@
+d:\code\ZencoderWrapper\ZencoderWrapper\bin\Debug\ZencoderWrapper.dll
+d:\code\ZencoderWrapper\ZencoderWrapper\bin\Debug\ZencoderWrapper.pdb
+d:\code\ZencoderWrapper\ZencoderWrapper\bin\Debug\Newtonsoft.Json.dll
+d:\code\ZencoderWrapper\ZencoderWrapper\bin\Debug\RestSharp.dll
+d:\code\ZencoderWrapper\ZencoderWrapper\bin\Debug\RestSharp.pdb
+d:\code\ZencoderWrapper\ZencoderWrapper\obj\Debug\ResolveAssemblyReference.cache
+d:\code\ZencoderWrapper\ZencoderWrapper\obj\Debug\ZencoderWrapper.dll
+d:\code\ZencoderWrapper\ZencoderWrapper\obj\Debug\ZencoderWrapper.pdb
