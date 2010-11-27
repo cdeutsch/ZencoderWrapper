@@ -254,5 +254,19 @@ namespace ZencoderWrapper.Tests
 
             //Assert.AreEqual(password, account.password, "Account password does not match.");
         }
+
+        /// <summary>
+        ///A test for CreateAccount
+        ///</summary>
+        [TestMethod()]
+        public void ListJobs()
+        {
+            ZencoderClient client = new ZencoderClient(API_KEY, true);
+
+            //get list of jobs
+            List<JobListingResponse> jobList = client.ListJobs(1, 2);
+
+            Assert.IsNotNull(jobList);
+        }
     }
 }

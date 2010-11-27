@@ -99,13 +99,23 @@ namespace ZencoderWrapper
         /// List all jobs.
         /// </summary>
         /// <returns></returns>
-        public List<JobListingResponse> ListJobs()
+        public List<JobListingResponse> ListJobs(int? page, int? per_page)
         {
             ValidateConfiguration();
 
+            string queryParams = "";
+            if (page.HasValue)
+            {
+                queryParams += "&page=" + page.Value.ToString();
+            }
+            if (per_page.HasValue)
+            {
+                queryParams += "&per_page=" + per_page.Value.ToString();
+            }
+
             //use restsharp to make the api call.
             RestClient client = GetClient();
-            RestRequest request = new RestRequest("jobs?api_key=" + api_key, Method.GET);
+            RestRequest request = new RestRequest("jobs?api_key=" + api_key + queryParams, Method.GET);
             request.OnBeforeDeserialization = resp =>
             {
                 if (resp.StatusCode == HttpStatusCode.BadRequest)
@@ -119,6 +129,14 @@ namespace ZencoderWrapper
             return response.Data;
         }
 
+        /// <summary>
+        /// List all jobs.
+        /// </summary>
+        /// <returns></returns>
+        public List<JobListingResponse> ListJobs()
+        {
+            return ListJobs(null, null);
+        }
         /// <summary>
         /// Request the details of the job specified.
         /// </summary>
