@@ -81,7 +81,10 @@ namespace ZencoderWrapper
 
             //use restsharp to make the api call.
             RestClient client = GetClient();
-            RestRequest request = new RestRequest("outputs/" + RestSharp.Contrib.HttpUtility.UrlEncode(OutputID.ToString()) + "/progress?api_key=" + api_key, Method.GET);
+            RestRequest request = new RestRequest("outputs/{id}/progress", Method.GET);
+            request.AddUrlSegment("id", OutputID.ToString());
+            request.AddParameter("api_key", api_key);
+
             request.OnBeforeDeserialization = resp =>
             {
                 if (resp.StatusCode == HttpStatusCode.BadRequest)
@@ -102,20 +105,20 @@ namespace ZencoderWrapper
         public List<JobListingResponse> ListJobs(int? page, int? per_page)
         {
             ValidateConfiguration();
-
-            string queryParams = "";
+            
+            //use restsharp to make the api call.
+            RestClient client = GetClient();
+            RestRequest request = new RestRequest("jobs", Method.GET);
+            request.AddParameter("api_key", api_key);
+            //add optional parameters
             if (page.HasValue)
             {
-                queryParams += "&page=" + page.Value.ToString();
+                request.AddParameter("page", page.Value.ToString());
             }
             if (per_page.HasValue)
             {
-                queryParams += "&per_page=" + per_page.Value.ToString();
+                request.AddParameter("per_page", per_page.Value.ToString());
             }
-
-            //use restsharp to make the api call.
-            RestClient client = GetClient();
-            RestRequest request = new RestRequest("jobs?api_key=" + api_key + queryParams, Method.GET);
             request.OnBeforeDeserialization = resp =>
             {
                 if (resp.StatusCode == HttpStatusCode.BadRequest)
@@ -148,7 +151,9 @@ namespace ZencoderWrapper
 
             //use restsharp to make the api call.
             RestClient client = GetClient();
-            RestRequest request = new RestRequest("jobs/" + RestSharp.Contrib.HttpUtility.UrlEncode(JobID.ToString()) + "?api_key=" + api_key, Method.GET);
+            RestRequest request = new RestRequest("jobs/{id}", Method.GET);
+            request.AddUrlSegment("id", JobID.ToString());
+            request.AddParameter("api_key", api_key);
             request.OnBeforeDeserialization = resp =>
             {
                 if (resp.StatusCode == HttpStatusCode.BadRequest)
@@ -172,7 +177,9 @@ namespace ZencoderWrapper
 
             //use restsharp to make the api call.
             RestClient client = GetClient();
-            RestRequest request = new RestRequest("jobs/" + RestSharp.Contrib.HttpUtility.UrlEncode(JobID.ToString()) + "?api_key=" + api_key, Method.DELETE);
+            RestRequest request = new RestRequest("jobs/{id}", Method.DELETE);
+            request.AddUrlSegment("id", JobID.ToString());
+            request.AddParameter("api_key", api_key);
             request.OnBeforeDeserialization = resp =>
             {
                 if (resp.StatusCode == HttpStatusCode.BadRequest)
@@ -209,7 +216,11 @@ namespace ZencoderWrapper
 
             //use restsharp to make the api call.
             RestClient client = GetClient();
-            RestRequest request = new RestRequest("jobs/" + RestSharp.Contrib.HttpUtility.UrlEncode(JobID.ToString()) + "/" + UpdateMethod + "?api_key=" + api_key, Method.GET);
+            RestRequest request = new RestRequest("jobs/{id}/{method}", Method.GET);
+            request.AddUrlSegment("id", JobID.ToString());
+            request.AddUrlSegment("method", UpdateMethod);
+            request.AddParameter("api_key", api_key);
+
             request.OnBeforeDeserialization = resp =>
             {
                 if (resp.StatusCode == HttpStatusCode.BadRequest)
@@ -289,7 +300,8 @@ namespace ZencoderWrapper
 
             //use restsharp to make the api call.
             RestClient client = GetClient();
-            RestRequest request = new RestRequest("account?api_key=" + api_key, Method.GET);
+            RestRequest request = new RestRequest("account", Method.GET);
+            request.AddParameter("api_key", api_key);
             request.OnBeforeDeserialization = resp =>
             {
                 if (resp.StatusCode == HttpStatusCode.BadRequest)
@@ -323,7 +335,9 @@ namespace ZencoderWrapper
 
             //use restsharp to make the api call.
             RestClient client = GetClient();
-            RestRequest request = new RestRequest("account/" + mode + "?api_key=" + api_key, Method.GET);
+            RestRequest request = new RestRequest("account/{mode}", Method.GET);
+            request.AddUrlSegment("mode", mode);
+            request.AddParameter("api_key", api_key);
             request.OnBeforeDeserialization = resp =>
             {
                 if (resp.StatusCode == HttpStatusCode.BadRequest)
