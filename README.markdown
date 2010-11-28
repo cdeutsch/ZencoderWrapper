@@ -5,6 +5,15 @@ A .NET wrapper for the Zencoder API written in C# using RestSharp.
 ### Why ###
 Zencoder has a really nice API builder on their website and tools like John Sheehan's RestSharp make calling web services from .NET easier then ever. But why not take it a step further and get it down to one line of code to submit an encoding job? That's what this ZencoderWrapper was built to do.
 
+### But there are already C# Wrappers for Zencoder ###
+
+Yes! There are! And this one by Chad Burggraf is particularly excellent and you should check it out!
+https://github.com/ChadBurggraf/zencoder-cs
+
+I didn't find Chad's library until after writing my own. D'oh! No regrets, I learned some new things. 
+
+I may end up using his library over my own for the asynchronous support. Part of it will depend on if Chad's library can compile with Mono since the personal project I want to build will ultimately be running on OSX. I'm not sure if my library will compile in Mono "as-is", but I believe RestSharp will and I don't think I used anything special beyond what's contained in RestSharp.
+
 ## Examples ##
 
 One liner transcode:
