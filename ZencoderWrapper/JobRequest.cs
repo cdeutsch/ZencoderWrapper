@@ -52,8 +52,11 @@ namespace ZencoderWrapper
         public JobRequest(string input, OutputSetting output)
             :this(input)
         {
-            this.outputs = new List<OutputSetting>();
-            this.outputs.Add(output);
+            if (output != null)
+            {
+                this.outputs = new List<OutputSetting>();
+                this.outputs.Add(output);
+            }
         }
 
         public JobRequest(string input, string output_base_url, string output_filename)
