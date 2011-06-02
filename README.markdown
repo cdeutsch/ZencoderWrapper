@@ -65,3 +65,10 @@ And finally here's how to get a list of all of your jobs:
 
     //get list of jobs  
     List<JobListingResponse> jobList = client.ListJobs();  
+	
+## History ##
+
+### 6/02/2011 ###
+* Fixed bug with frame rate needing to be a decimal.
+* Updated Thumbmail class to support new return values.
+* Updated to rethrow RestSharp errors.
