@@ -23,8 +23,8 @@ namespace ZencoderWrapper
         public int? audio_quality { get; set; }
         public ThumbnailSetting thumbnails { get; set; }
         public string deinterlace { get; set; }
-        public int? max_frame_rate { get; set; }
-        public int? frame_rate { get; set; }
+        public decimal? max_frame_rate { get; set; }
+        public decimal? frame_rate { get; set; }
         public int? keyframe_interval { get; set; }
         public int? video_bitrate { get; set; }
         public int? bitrate_cap { get; set; }

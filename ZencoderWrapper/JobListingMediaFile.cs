@@ -8,7 +8,7 @@ namespace ZencoderWrapper
     public class JobListingMediaFile : JobListingFile
     {
         public string format { get; set; }        
-        public int? frame_rate { get; set; }
+        public decimal? frame_rate { get; set; }
         public DateTime? finished_at { get; set; }        
         public long? duration_in_ms { get; set; }
         public int? audio_sample_rate { get; set; }                
@@ -23,6 +23,7 @@ namespace ZencoderWrapper
         public string channels { get; set; }
         public int? width { get; set; }
         public int? video_bitrate_in_kbps { get; set; }
-        public string state { get; set; }       
+        public string state { get; set; }
+        public int? total_bitrate_in_kbps { get; set; }
     }
 }

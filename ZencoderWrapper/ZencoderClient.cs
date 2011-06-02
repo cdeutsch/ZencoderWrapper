@@ -62,6 +62,10 @@ namespace ZencoderWrapper
 
             RestResponse<JobResponse> response = client.Execute<JobResponse>(request);
             ValidateResponse(response, HttpStatusCode.Created);
+            if (response.ErrorException != null)
+            {
+                throw response.ErrorException;
+            }
             return response.Data;
         }
 
@@ -95,6 +99,10 @@ namespace ZencoderWrapper
 
             RestResponse<JobOutputProgressResponse> response = client.Execute<JobOutputProgressResponse>(request);
             ValidateResponse(response, HttpStatusCode.OK);
+            if (response.ErrorException != null)
+            {
+                throw response.ErrorException;
+            }
             return response.Data;
         }
 
@@ -129,6 +137,10 @@ namespace ZencoderWrapper
 
             RestResponse<List<JobListingResponse>> response = client.Execute<List<JobListingResponse>>(request);
             ValidateResponse(response, HttpStatusCode.OK);
+            if (response.ErrorException != null)
+            {
+                throw response.ErrorException;
+            }
             return response.Data;
         }
 
@@ -164,6 +176,10 @@ namespace ZencoderWrapper
 
             RestResponse<JobListingResponse> response = client.Execute<JobListingResponse>(request);
             ValidateResponse(response, HttpStatusCode.OK);
+            if (response.ErrorException != null)
+            {
+                throw response.ErrorException;
+            }
             return response.Data;
         }
 
@@ -264,6 +280,10 @@ namespace ZencoderWrapper
 
             RestResponse<CreateAccountResponse> response = client.Execute<CreateAccountResponse>(request);
             ValidateResponse(response, HttpStatusCode.Created);
+            if (response.ErrorException != null)
+            {
+                throw response.ErrorException;
+            }
             return response.Data;
         }
 
@@ -312,6 +332,10 @@ namespace ZencoderWrapper
 
             RestResponse<AccountResponse> response = client.Execute<AccountResponse>(request);
             ValidateResponse(response, HttpStatusCode.OK);
+            if (response.ErrorException != null)
+            {
+                throw response.ErrorException;
+            }
             return response.Data;
         }
 

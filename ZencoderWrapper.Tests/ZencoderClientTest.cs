@@ -19,6 +19,7 @@ namespace ZencoderWrapper.Tests
         public string OutputBaseUrl = "ftp://cdeutsch.com/";
         public string OutputFilename = "output.mp4";
         public string WatermarkImageUrl = "http://qwikcast.tv/images/verytoparrow.gif";
+        public int GetJobId = 4637870;
 
         private TestContext testContextInstance;
 
@@ -267,6 +268,20 @@ namespace ZencoderWrapper.Tests
             List<JobListingResponse> jobList = client.ListJobs(1, 2);
 
             Assert.IsNotNull(jobList);
+        }
+
+        /// <summary>
+        ///A test for CreateAccount
+        ///</summary>
+        [TestMethod()]
+        public void GetJob()
+        {
+            ZencoderClient client = new ZencoderClient(API_KEY, true);
+
+            //get list of jobs
+            JobListingResponse job = client.GetJob(GetJobId);
+
+            Assert.IsNotNull(job);
         }
     }
 }
