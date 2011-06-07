@@ -22,6 +22,7 @@ namespace ZencoderWrapper
         public string audio_codec { get; set; }
         public int? audio_quality { get; set; }
         public ThumbnailSetting thumbnails { get; set; }
+        public S3HeadersSetting s3_headers { get; set; }
         public string deinterlace { get; set; }
         public decimal? max_frame_rate { get; set; }
         public decimal? frame_rate { get; set; }
