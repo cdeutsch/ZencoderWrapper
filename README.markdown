@@ -68,6 +68,9 @@ And finally here's how to get a list of all of your jobs:
 	
 ## History ##
 
+### 6/15/2011 ###
+* Merge from craigkitterman: Added support for S3 bucket HTTP headers in OutputSettings.
+
 ### 6/02/2011 ###
 * Fixed bug with frame rate needing to be a decimal.
 * Updated Thumbmail class to support new return values.
