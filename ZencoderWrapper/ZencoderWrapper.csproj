@@ -65,6 +65,7 @@
     <Compile Include="NotificationSetting.cs" />
     <Compile Include="OutputSetting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S3HeadersSetting.cs" />
     <Compile Include="Serializer.cs" />
     <Compile Include="ThumbnailSetting.cs" />
     <Compile Include="Extensions\MiscExtensions.cs" />
